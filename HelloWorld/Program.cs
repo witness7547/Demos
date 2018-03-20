@@ -11,9 +11,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-            //ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString)
-
-            
+            Console.WriteLine("this is test!");
         }  
     }
 }
