@@ -1,0 +1,10 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EFModelFirst.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EFModelFirst.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EFModelFirst.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EntityFramework.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EntityFramework.xml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\obj\Debug\EFModelFirst.csprojResolveAssemblyReference.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\obj\Debug\EFModelFirst.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFModelFirst\obj\Debug\EFModelFirst.pdb

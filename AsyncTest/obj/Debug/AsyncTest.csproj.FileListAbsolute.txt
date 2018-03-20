@@ -1,0 +1,13 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\bin\Debug\AsyncTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\bin\Debug\AsyncTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\bin\Debug\AsyncTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\MainWindow.g.cs
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\App.g.cs
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest_MarkupCompile.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest_MarkupCompile.lref
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\MainWindow.baml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest.g.resources
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest.Properties.Resources.resources
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest.csproj.GenerateResource.Cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AsyncTest\obj\Debug\AsyncTest.pdb

@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="ScreenTest.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScreenTest"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200" Background="LightCyan" Width="200" Height="200">
+    <Grid>
+        <TextBlock Width="60" Height="20" Background="LightGreen">hello world</TextBlock>
+    </Grid>
+</UserControl>

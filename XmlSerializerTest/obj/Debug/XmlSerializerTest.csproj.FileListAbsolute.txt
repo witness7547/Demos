@@ -1,0 +1,5 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\XmlSerializerTest\bin\Debug\XmlSerializerTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\XmlSerializerTest\bin\Debug\XmlSerializerTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\XmlSerializerTest\bin\Debug\XmlSerializerTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\XmlSerializerTest\obj\Debug\XmlSerializerTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\XmlSerializerTest\obj\Debug\XmlSerializerTest.pdb

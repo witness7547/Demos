@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DeleteFileFolderTest
+{
+    class Program
+    {
+        static uint deletedFoldersCount = 0;
+
+        static void Main(string[] args)
+        {
+            try
+            {
+                //show all folders on current directory
+                string[] dirs = Directory.GetDirectories(Directory.GetCurrentDirectory());
+                if (dirs.Count() > 0)
+                {
+                    Console.WriteLine(dirs.Count() + " folders been found in current directory:");
+                    foreach (var item in dirs)
+                    {
+                        Console.WriteLine(item);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("There is no folder on current directory!");
+                    Console.ReadKey();
+                    return;
+                }
+
+
+                //delete the specified folders
+                Console.WriteLine("");
+                Console.WriteLine("Press D to delete the folders or E to exit:");
+                bool flag = true;
+                while (flag)
+                {                    
+                    ConsoleKey myKey = Console.ReadKey().Key;
+                    switch (myKey)
+                    {
+                        case ConsoleKey.D:
+                            DeleteFolders(dirs);
+                            flag = false;
+                            break;
+
+                        case ConsoleKey.E:
+                            return;
+
+                        default:
+                            break;
+                    }
+                }
+
+
+                Console.WriteLine("");
+                Console.WriteLine("Deleted folders count: {0}.", deletedFoldersCount);
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                Console.ReadLine();
+            }
+        }
+
+        private static void DeleteFolders(string[] dirs)
+        {
+            foreach (var item in dirs)
+            {
+                if (item.EndsWith("bin") || item.EndsWith("obj"))
+                {
+                    Directory.Delete(item, true);
+                    deletedFoldersCount++;
+                    Console.WriteLine(item + " deleted!");
+                }
+                else
+                {
+                    DeleteFolders(Directory.GetDirectories(item));
+                }
+            }
+        }
+    }
+}

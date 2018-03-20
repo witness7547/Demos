@@ -1,0 +1,6 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\DeleteFileFolderTest\bin\Debug\DeleteFileFolderTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\DeleteFileFolderTest\bin\Debug\DeleteFileFolderTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\DeleteFileFolderTest\bin\Debug\DeleteFileFolderTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\DeleteFileFolderTest\obj\Debug\DeleteFileFolderTest.csprojResolveAssemblyReference.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\DeleteFileFolderTest\obj\Debug\DeleteFileFolderTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\DeleteFileFolderTest\obj\Debug\DeleteFileFolderTest.pdb

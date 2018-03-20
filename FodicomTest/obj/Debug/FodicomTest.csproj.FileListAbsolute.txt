@@ -1,0 +1,8 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\bin\Debug\FodicomTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\bin\Debug\FodicomTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\bin\Debug\FodicomTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\bin\Debug\Dicom.Core.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\bin\Debug\Dicom.Core.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\obj\Debug\FodicomTest.csprojResolveAssemblyReference.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\obj\Debug\FodicomTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\FodicomTest\obj\Debug\FodicomTest.pdb

@@ -1,0 +1,5 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AppDomainTest\bin\Debug\AppDomainTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AppDomainTest\bin\Debug\AppDomainTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AppDomainTest\bin\Debug\AppDomainTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AppDomainTest\obj\Debug\AppDomainTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\AppDomainTest\obj\Debug\AppDomainTest.pdb

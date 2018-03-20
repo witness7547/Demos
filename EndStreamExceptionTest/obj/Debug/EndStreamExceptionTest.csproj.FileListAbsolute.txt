@@ -1,0 +1,6 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EndStreamExceptionTest\bin\Debug\EndStreamExceptionTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EndStreamExceptionTest\bin\Debug\EndStreamExceptionTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EndStreamExceptionTest\bin\Debug\EndStreamExceptionTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EndStreamExceptionTest\obj\Debug\EndStreamExceptionTest.csprojResolveAssemblyReference.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EndStreamExceptionTest\obj\Debug\EndStreamExceptionTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EndStreamExceptionTest\obj\Debug\EndStreamExceptionTest.pdb

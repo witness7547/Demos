@@ -1,0 +1,19 @@
+﻿<Application x:Class="WpfTemplateTest.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfTemplateTest"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate x:Key="yearPriceTemplate">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Grid>
+                        <Rectangle Stroke="Yellow" Fill="Orange" Width="{Binding Price}"/>
+                        <TextBlock Text="{Binding Year}"/>
+                    </Grid>
+                    <TextBlock Text="{Binding Price}" Margin="5, 0"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

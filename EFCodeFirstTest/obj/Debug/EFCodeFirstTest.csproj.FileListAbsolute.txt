@@ -1,0 +1,15 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EntityFramework.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\MySql.Data.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EntityFramework.xml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.csprojResolveAssemblyReference.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.Migrations.Initial.resources
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.csproj.GenerateResource.Cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.Migrations.AuthorAge.resources

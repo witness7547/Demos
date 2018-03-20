@@ -1,0 +1,17 @@
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\bin\Debug\ScreenTest.exe.config
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\bin\Debug\ScreenTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\bin\Debug\ScreenTest.pdb
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest.csprojResolveAssemblyReference.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\MainWindow.g.cs
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\UserControl1.g.cs
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\App.g.cs
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest_MarkupCompile.cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest_MarkupCompile.lref
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\MainWindow.baml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\UserControl1.baml
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest.g.resources
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest.Properties.Resources.resources
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest.csproj.GenerateResource.Cache
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest.exe
+C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ScreenTest\obj\Debug\ScreenTest.pdb
