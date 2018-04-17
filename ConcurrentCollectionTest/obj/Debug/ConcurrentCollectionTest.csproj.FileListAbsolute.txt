@@ -1,6 +1,0 @@
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ConcurrentCollectionTest\bin\Debug\ConcurrentCollectionTest.exe.config
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ConcurrentCollectionTest\bin\Debug\ConcurrentCollectionTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ConcurrentCollectionTest\bin\Debug\ConcurrentCollectionTest.pdb
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ConcurrentCollectionTest\obj\Debug\ConcurrentCollectionTest.csprojResolveAssemblyReference.cache
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ConcurrentCollectionTest\obj\Debug\ConcurrentCollectionTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\ConcurrentCollectionTest\obj\Debug\ConcurrentCollectionTest.pdb

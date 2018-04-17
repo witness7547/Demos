@@ -1,5 +1,0 @@
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\Ado.NetTest\bin\Debug\Ado.NetTest.exe.config
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\Ado.NetTest\bin\Debug\Ado.NetTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\Ado.NetTest\bin\Debug\Ado.NetTest.pdb
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\Ado.NetTest\obj\Debug\Ado.NetTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\Ado.NetTest\obj\Debug\Ado.NetTest.pdb

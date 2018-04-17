@@ -1,5 +1,0 @@
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GCTest\bin\Debug\GCTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GCTest\bin\Debug\GCTest.pdb
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GCTest\bin\Debug\GCTest.exe.config
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GCTest\obj\Debug\GCTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GCTest\obj\Debug\GCTest.pdb

@@ -1,5 +1,0 @@
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GenericTest\bin\Debug\GenericTest.exe.config
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GenericTest\bin\Debug\GenericTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GenericTest\bin\Debug\GenericTest.pdb
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GenericTest\obj\Debug\GenericTest.exe
-C:\Users\fmisx\Documents\Visual Studio 2015\Projects\Demos\GenericTest\obj\Debug\GenericTest.pdb
