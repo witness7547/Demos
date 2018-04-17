@@ -12,7 +12,7 @@ namespace XmlSerializerTest
         {
             //WriteXML();
 
-            ReadXML();
+            ReadXML(); 
         }
 
         public static void WriteXML()
