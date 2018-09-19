@@ -42,9 +42,22 @@ namespace AppDomainTest
 
             // Call a method on the object via the proxy, passing the 
             // default AppDomain's friendly name in as a parameter.
-            mbrt.SomeMethod(callingDomainName);
+            try
+            {
+                mbrt.SomeMethod(callingDomainName);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.ReadLine();
+
+
+            //call a method for test Exception(捕获不到另一个APPdomain中的异常)
+            mbrt.TestThrowAnException();
+            Console.ReadLine();
+
 
             // Unload the second AppDomain. This deletes its object and 
             // invalidates the proxy object.
@@ -89,6 +102,11 @@ namespace AppDomainTest
                 callingDomainName,
                 Thread.GetDomain().FriendlyName
             );
+        }
+
+        public void TestThrowAnException()
+        {
+            throw new Exception("throwed in AD#2!");
         }
     }
 }

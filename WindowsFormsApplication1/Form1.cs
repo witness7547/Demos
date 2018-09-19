@@ -18,5 +18,10 @@ namespace WindowsFormsApplication1
 
             ConsoleManager.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string mystr = this.textBox1.Text;
+        }
     }
 }
