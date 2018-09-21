@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadTest", "ThreadTest\Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerTest", "TimerTest\TimerTest.csproj", "{309E00AE-7894-4A6F-BE0E-E35D42776E37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronizationPrimitives", "SynchronizationPrimitives\SynchronizationPrimitives.csproj", "{EDCAC428-2C2D-4B5E-8A70-18768D390270}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{309E00AE-7894-4A6F-BE0E-E35D42776E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{309E00AE-7894-4A6F-BE0E-E35D42776E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{309E00AE-7894-4A6F-BE0E-E35D42776E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCAC428-2C2D-4B5E-8A70-18768D390270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCAC428-2C2D-4B5E-8A70-18768D390270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCAC428-2C2D-4B5E-8A70-18768D390270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCAC428-2C2D-4B5E-8A70-18768D390270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
