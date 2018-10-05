@@ -1,4 +1,32 @@
 ﻿1.进程内同步
-
+lock语句，Interlocked类，Monitor类
 
 2.进程间同步
+Mutex类， Event类， SemaphoreSlim类， ReaderWriterLockSlim类
+
+AutoResetEvent is used for send signals between two threads.
+
+ManualResetEvent is used for send signals between two or more threads.
+Multiple threads can enter into a waiting/blocking state by calling the WaitOne method on ManualResetEvent object.
+When controlling thread calls the Set method all the waiting threads are unblocked and free to proceed.
+
+
+C# Barrier class is synchronization primitives used in .NET threading. *** Barrier is used in an algorithm which composed of multiple phases.*** 
+In this Barrier synchronization, we have multiple threads working on a single algorithm. Algorithm works in phases. All threads must 
+complete phase 1 then they can continue to phase 2. 
+Until all the threads do not complete the phase 1, all threads must wait for all the threads to reach at phase 1.
+When phase 1 is completed by all threads then they will continue to further phases. All the threads must be in same phases in all time. 
+There is no chance of threads to work in different phases.
+
+
+C# CountdownEvent is a synchronization primitive which unblocks a waiting thread when its receives signal a certain number of times. 
+CountdownEvent is used in fork-join scenarios.
+
+
+C# semaphore allows only a limited number of threads to enter into a critical section. Semaphore is mainly used in scenarios
+ where we have limited number of resources and we have to limit the number of threads that can use it.
+ Semaphores are Int32 variables stored in a operating system resources. When we initialize the semaphore object we initialize with number. 
+ This number limits the threads that can enter into the critical section.
+
+
+ Interlocked: Provides atomic operations for variables that are shared by multiple threads.
