@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EDCAC428-2C2D-4B5E-8A70-18768D390270}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{A37B08EA-DB70-4014-8AFE-7FE2600CA0B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SynchronizationPrimitives</RootNamespace>
-    <AssemblyName>SynchronizationPrimitives</AssemblyName>
+    <RootNamespace>AddInTypes</RootNamespace>
+    <AssemblyName>AddInTypes</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,20 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoResetEventTest.cs" />
-    <Compile Include="BarrierTest.cs" />
-    <Compile Include="CountDownEventTest.cs" />
-    <Compile Include="LockTest.cs" />
-    <Compile Include="ManualResetEventTest.cs" />
-    <Compile Include="MutexTest.cs" />
+    <Compile Include="AddInTypeA.cs" />
+    <Compile Include="AddInTypeB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SemaphoreTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="同步基元.txt" />
+    <ProjectReference Include="..\HostSDK\HostSDK.csproj">
+      <Project>{6d571c8c-87c9-4c85-bb8d-237686286ee1}</Project>
+      <Name>HostSDK</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

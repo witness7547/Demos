@@ -10,7 +10,7 @@ namespace HelloWorld
     //sample for Environment class summary.
     class EnvironmentTest
     {
-        static void Main()
+        public static void Test()
         {
             String str;
             String nl = Environment.NewLine;
@@ -34,6 +34,9 @@ namespace HelloWorld
             //  <-- Keep this information secure! -->
             Console.WriteLine("MachineName: {0}", Environment.MachineName);
 
+
+            //A string containing "\r\n" for non-Unix platforms, or a string containing "\n"
+            //for Unix platforms.
             Console.WriteLine("NewLine: {0}  first line{0}  second line{0}  third line",
                                   Environment.NewLine);
 
