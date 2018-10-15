@@ -13,6 +13,7 @@ namespace HelloWorld
             // ExplicitInterface.Test();
 
             StringBuilderTest.Test();
+            Console.WriteLine("test");
         }
     }
 
