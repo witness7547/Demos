@@ -20,3 +20,22 @@ If the work you have is CPU-bound and you care about responsiveness, use async a
 Additionally, you should always measure the execution of your code. For example, you may find yourself in a situation
  where your CPU-bound work is not costly enough compared with the overhead of context switches when multithreading.
   Every choice has its tradeoff, and you should pick the correct tradeoff for your situation.
+
+
+
+
+  Task and Task<T>
+Tasks are constructs used to implement what is known as the Promise Model of Concurrency.
+ In short, they offer you a "promise" that work will be completed at a later point, letting you coordinate with the promise with a clean API.
+Task represents a single operation which does not return a value.
+Task<T> represents a single operation which returns a value of type T.
+It’s important to reason about tasks as abstractions of work happening asynchronously, and not an abstraction over threading. 
+By default, tasks execute on the current thread and delegate work to the Operating System, as appropriate. Optionally,
+ tasks can be explicitly requested to run on a separate thread via the Task.Run API.
+Tasks expose an API protocol for monitoring, waiting upon and accessing the result value (in the case of Task<T>) of a task.
+ Language integration, with the await keyword, provides a higher-level abstraction for using tasks.
+Using await allows your application or service to perform useful work while a task is running by yielding control to
+ its caller until the task is done. 
+ *****  Your code does not need to rely on callbacks or events to continue execution after the task has been completed.  ***** 
+ The language and task API integration does that for you. If you’re using Task<T>, 
+ the await keyword will additionally "unwrap" the value returned when the Task is complete. The details of how this works are explained further below.

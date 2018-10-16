@@ -88,10 +88,10 @@ namespace AsyncTest
                 return CalculateDamageDone();//********************************************************************************** CPU-Bound ***
             });
 
-            resultsTextBox.Text = "Result of damage calculating: " +result.ToString();
+            resultsTextBox.Text = "Result of damage calculating: " + result.ToString();
         }
 
-        private int CalculateDamageDone()
+        private DamageResult CalculateDamageDone()
         {
             // Code omitted:
             //
@@ -101,7 +101,21 @@ namespace AsyncTest
             //simulate the calculation
             System.Threading.Thread.Sleep(2000);
 
-            return 100;
+            return new DamageResult(100);
+        }
+
+        class DamageResult
+        {
+            public int result;
+            public DamageResult(int r)
+            {
+                result = r;
+            }
+
+            public override string ToString()
+            {
+                return this.result.ToString();
+            }
         }
     }
 }
