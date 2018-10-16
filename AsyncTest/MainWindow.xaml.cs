@@ -52,7 +52,7 @@ namespace AsyncTest
 
             // GetStringAsync returns a Task<string>. That means that when you await the  
             // task you'll get a string (urlContents).  
-            Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+            Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");//******************************** I/O-Bound ***
 
             // You can do work here that doesn't rely on the string from GetStringAsync.  
             DoIndependentWork();
@@ -74,6 +74,34 @@ namespace AsyncTest
         void DoIndependentWork()
         {
             resultsTextBox.Text += "Working . . . . . . .\r\n";
+        }
+
+        private async void calculateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resultsTextBox.Text = "Calculating . . . . ";
+
+            // This line will yield control to the UI while CalculateDamageDone()
+            // performs its work.  The UI thread is free to perform other work.
+            var result = await Task.Run(() => 
+            {
+                // … do Compute-bound work here
+                return CalculateDamageDone();//********************************************************************************** CPU-Bound ***
+            });
+
+            resultsTextBox.Text = "Result of damage calculating: " +result.ToString();
+        }
+
+        private int CalculateDamageDone()
+        {
+            // Code omitted:
+            //
+            // Does an expensive calculation and returns
+            // the result of that calculation.
+            
+            //simulate the calculation
+            System.Threading.Thread.Sleep(2000);
+
+            return 100;
         }
     }
 }
