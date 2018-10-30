@@ -10,6 +10,13 @@
         
     </Window.Resources>
     <Grid Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <ListView ItemTemplate="{StaticResource yearPriceTemplate}" ItemsSource="{Binding}"></ListView>
+        <Canvas Grid.Row="1">
+            <Button Name="btn1" Height="50" Width="100" Content="test" Click="Button_Click"/>
+        </Canvas>
     </Grid>
 </Window>

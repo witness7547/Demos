@@ -13,6 +13,8 @@ namespace HelloWorld
             // ExplicitInterface.Test();
 
             StringBuilderTest.Test();
+
+            //SizeofTest.Test();
             
             //this is add on github
         }

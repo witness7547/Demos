@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +22,21 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string mystr = this.textBox1.Text;
+            //string mystr = this.textBox1.Text;
+
+            Thread myThread = new Thread(ThreadProc);
+            myThread.Start(SynchronizationContext.Current);
+        }
+
+        private void ThreadProc(object obj)
+        {
+            //SynchronizationContext sc = (SynchronizationContext)obj;
+            //sc.Post(Callback, "hello world!");
+        }
+
+        private void Callback(object str)
+        {
+            this.textBox1.Text = str.ToString();
         }
     }
 }

@@ -50,8 +50,11 @@
     <Compile Include="ConstReadonly.cs" />
     <Compile Include="EnvironmentTest.cs" />
     <Compile Include="ExplicitInterface.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IDisposableTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SizeofTest.cs" />
     <Compile Include="StringBuilderTest.cs" />
     <Compile Include="StringFormat.cs" />
     <Compile Include="StringTest.cs" />
