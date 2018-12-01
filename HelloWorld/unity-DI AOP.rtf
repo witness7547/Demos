@@ -1,0 +1,242 @@
+{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang2052\f0\fs20 ref:https://docs.microsoft.com/en-us/previous-versions/msp-n-p/dn170416(v%3dpandp.10)\b\fs48\par
+chapter1 Introduction\fs40\par
+Motivations\fs22\par
+1.Maintainability\par
+--------------------------------------------------------------\par
+2.Testability\b0\par
+A testable system is one that enables you to effectively test individual parts of the system. Designing and writing effective tests can be just as challenging as designing and writing testable application code, especially as systems become larger and more complex. \b Methodologies such as test-driven development (TDD) require you to write a unit test before writing any code to implement a new feature and the goal of such a design technique is to improve the quality of your application. \b0 Such design techniques also help to extend the coverage of your unit tests, reduce the likelihood of regressions, and make refactoring easier. However, as part of your testing processes you should also incorporate other types of tests such as \b acceptance tests, integration tests, performance tests, and stress tests.\par
+\b0 Running tests can also cost money and be time consuming because of the requirement to test in a realistic environment. For example, for some types of testing on a cloud-based application you need to deploy the application to the cloud environment and run the tests in the cloud. If you use TDD, it may be impractical to run all the tests in the cloud all of the time because of the time it takes to deploy your application, even to a local emulator. In this type of scenario, you may decide to use test doubles (simple stubs or verifiable mocks) that replace the real components in the cloud environment with test implementations in order to enable you to run your suite of unit tests in isolation during the standard TDD development cycle.\par
+\par
+----------------------------------------------------------------------\par
+3.Flexibility and Extensibility\par
+----------------------------------------------------------------------\par
+4.Late Binding\par
+In some application scenarios, you may have a requirement to support late binding. Late binding is useful if you require the ability to replace part of your system without recompiling. For example, your application might support multiple relational databases with a separate module for each supported database type. You can use declarative configuration to tell the application to use a specific module at runtime. Another scenario where late binding can be useful is to enable users of the system to provide their own customization through a plug-in. Again, you can instruct the system to use a specific customization by using a configuration setting or a convention where the system scans a particular location on the file system for modules to use.\par
+----------------------------------------------------------------------\par
+5.Parallel Development\par
+When you are developing large scale (or even small and medium scale) systems, it is not practical to have the entire development team working simultaneously on the same feature or component. In reality, you will assign different features and components to smaller groups to work on in parallel. Although this approach enables you to reduce the overall duration of the project, it does introduce additional complexities: you need to manage multiple groups and to ensure that you can integrate the parts of the application developed by different groups to work correctly together.\par
+\par
+----------------------------------------------------------------------\par
+6.\b Crosscutting Concerns\b0\par
+Enterprise applications typically need to address a range of crosscutting concerns such as \b validation, exception handling, and logging\b0 . You may need these features in many different areas of the application and you will want to implement them in a standard, consistent way to improve the maintainability of the system. Ideally, you want a mechanism that will enable you to efficiently and transparently add behaviors to your objects at either design time or run time without requiring you make changes to your existing classes. Often, you need the ability to configure these features at runtime and in some cases, add features to address a new crosscutting concern to an existing application.\par
+\par
+----------------------------------------------------------------------\par
+7.\b Loose Coupling\b0\par
+You can address many of the requirements listed in the previous sections by ensuring that your design results in an application that loosely couples the many parts that make up the application. Loose coupling, as opposed to tight coupling, means reducing the number of dependencies between the components that make up your system. This makes it easier and safer to make changes in one area of the system because each part of the system is largely independent of the other.\par
+\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\par
+\b\fs36 A Simple Example\b0\fs22\par
+public class TenantStore\par
+\{\par
+  ...\par
+\par
+  public Tenant GetTenant(string tenant)\par
+  \{\par
+    ...\par
+  \}\par
+\par
+  public IEnumerable<string> GetTenantNames()\par
+  \{\par
+    ...\par
+  \}\par
+\}\par
+\par
+public class ManagementController\par
+\{\par
+  private readonly TenantStore tenantStore;\par
+\par
+  public ManagementController()\par
+  \{\par
+    tenantStore = new TenantStore(...);\par
+  \}\par
+\par
+  public ActionResult Index()\par
+  \{\par
+    var model = new TenantPageViewData<IEnumerable<string>>\par
+      (this.tenantStore.GetTenantNames())\par
+    \{\par
+      Title = "Subscribers"\par
+    \};\par
+    return this.View(model);\par
+  \}\par
+\par
+\par
+  public ActionResult Detail(string tenant)\par
+  \{\par
+    var contentModel = this.tenantStore.GetTenant(tenant);\par
+    var model = new TenantPageViewData<Tenant>(contentModel)\par
+    \{\par
+      Title = string.Format("\{0\} details", contentModel.Name)\par
+    \};\par
+    return this.View(model);\par
+  \}\par
+\par
+  ...\par
+\}\par
+\par
+\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\emdash\par
+\b\fs36 after the modification\b0\fs22\'a3\'ba\par
+public interface ITenantStore\par
+\{\par
+  void Initialize();\par
+  Tenant GetTenant(string tenant);\par
+  IEnumerable<string> GetTenantNames();\par
+  void SaveTenant(Tenant tenant);\par
+  void UploadLogo(string tenant, byte[] logo);\par
+\}\par
+\par
+public class TenantStore : ITenantStore\par
+\{\par
+  ...\par
+\par
+  public TenantStore()\par
+  \{\par
+    ...\par
+  \}\par
+\par
+  ...\par
+\}\par
+\par
+public class ManagementController : Controller\par
+\{\par
+  private readonly ITenantStore tenantStore;\par
+\par
+  public ManagementController(ITenantStore tenantStore)\par
+  \{\par
+    this.tenantStore = tenantStore;\par
+  \}\par
+\par
+  public ActionResult Index()\par
+  \{\par
+    ...\par
+  \}\par
+\par
+  public ActionResult Detail(string tenant)\par
+  \{\par
+    ...\par
+  \}\par
+\par
+  ...\par
+\}\par
+\par
+----------------------------------------------------------------------\par
+\b\fs40 Principles of Object-Oriented Design\par
+\b0\fs22 Finally, before moving on to dependency injection and Unity, we want to relate the five SOLID principles of object-oriented programming and design to the discussion so far. SOLID is an acronym that refers to the following principles:\par
+Single responsibility principle\par
+Open/close principle\par
+Liskov substitution principle\par
+Interface segregation principle\par
+Dependency inversion principle\par
+\par
+----------------------------------------------------------------------\par
+1.Single Responsibility Principle\par
+\par
+----------------------------------------------------------------------\par
+2.The Open/Closed Principle\par
+The open/closed principle states that "\b software entities (classes, modules, functions, and so on) should be open for extension, but closed for modification\b0 " (Meyer, Bertrand (1988). Object-Oriented Software Construction.)\par
+Although you might modify the code in a class to fix a defect, you should extend a class if you want to add any new behavior to it. This helps to keep the code maintainable and testable because existing behavior should not change, and any new behavior exists in new classes. The requirement to be able to add support for crosscutting concerns to your application can best be met by following the open/closed principle. For example, when you add logging to a set of classes in your application, you shouldn\rquote t make changes to the implementation of your existing classes.\par
+\par
+----------------------------------------------------------------------\par
+3.The Liskov Substitution\'a3\'a8\'cc\'e6\'bb\'bb\'a3\'a9 Principle\par
+The Liskov substitution principle in object-oriented programming states that in a computer program, \b if S is a subtype of T, then objects of type T may be replaced with objects of type S \b0 without altering any of the desirable properties, such as correctness, of that program.\par
+In the second code sample shown in this chapter, the ManagementController class should continue to work as expected if you pass any implementation of the ITenantStore interface to it. This example uses an interface type as the type to pass to the constructor of the ManagementController class, but you could equally well use an abstract type.\par
+\par
+----------------------------------------------------------------------\par
+4.Interface Segregation Principle\par
+The interface segregation principle is a software development principle intended to make software more maintainable. The interface segregation principle encourages loose coupling and therefore makes a system easier to refactor, change, and redeploy. The principle states that interfaces that are very large should be split into smaller and more specific ones so that client classes only need to know about the methods that they use: no client class should be forced to depend on methods it does not use.\par
+In the definition of the ITenantStore interface shown earlier in this chapter, if you determined that not all client classes use the UploadLogo method you should consider splitting this into a separate interface as shown in the following code sample:\par
+public interface ITenantStore\par
+\{\par
+  void Initialize();\par
+  Tenant GetTenant(string tenant);\par
+  IEnumerable<string> GetTenantNames();\par
+  void SaveTenant(Tenant tenant);\par
+\}\par
+\par
+public interface ITenantStoreLogo\par
+\{\par
+  void UploadLogo(string tenant, byte[] logo);\par
+\}\par
+\par
+\par
+public class TenantStore : ITenantStore, ITenantStoreLogo\par
+\{\par
+  ...\par
+\par
+  public TenantStore()\par
+  \{\par
+    ...\par
+  \}\par
+\par
+  ...\par
+\}\par
+----------------------------------------------------------------------\par
+5.Dependency Inversion Principle\par
+The dependency inversion principle states that:\par
+High-level modules should not depend on low-level modules. Both should depend on abstractions.\par
+Abstractions should not depend upon details. Details should depend upon abstractions.\par
+The two code samples in this chapter illustrate how to apply this principle. In the first sample, the high-level ManagementController class depends on the low-level TenantStore class. This typically limits the options for re-using the high-level class in another context.\par
+In the second code sample, the ManagementController class now has a dependency on the ITenantStore abstraction, as does the TenantStore class.\par
+\par
+\par
+***************************************************************************\par
+\b\fs48 chapter2 Dependency Injection\par
+\fs22 Factories, Service Locators, and Dependency Injection\b0\par
+Factories, service locators, and dependency injection are all approaches you can take to move the responsibility for instantiating and managing objects on behalf of other client objects. In this section, you'll see how you can use them with the same example you saw in the previous chapter. You'll also see the pros and cons of the different approaches and see why dependency injection can be particularly useful in enterprise applications.\par
+\par
+The Factory Method Pattern\par
+Simple Factory Pattern\par
+Abstract Factory Pattern\par
+\par
+Service Locator Pattern\par
+Using a service locator provides another variation to this general approach of using another class to create objects on your behalf. You can think of a service locator as a registry that you can look up an instance of an object or service that another class in your application created and registered with the service locator. The service locator might support querying for objects by a string key or by interface type. Often, in contrast to the factory patterns where the factory creates the object but gives responsibility for managing its lifetime to the client class, the service locator is responsible for managing the lifetime of the object and simply returns a reference to the client. Also, \b factories are typically responsible for creating instances of specific types or families of types as in the case of the abstract factory pattern, while a service locator may be capable of returning a reference to an object of \i any type \i0 in the application.\par
+\b0 Any classes that retrieve object references or service references from the service locator will have a dependency on the service locator itself.\par
+When using a service locator, every class will have a dependency on your service locator. This is not the case with dependency injection.\par
+\par
+Dependency Injection\par
+A common feature of the all the factory patterns and the service locator pattern, is that it is still the high-level client object's responsibility to resolve its own dependencies by requesting the specific instances of the types that it needs. They each adopt a pull model of varying degrees of sophistication, assigning various responsibilities to the factory or service locator. The pull model also means that the high-level client class has a dependency on the class that is responsible for creating or locating the object it wants to use. This also means that the dependencies of the high-level client classes are hidden inside of those classes rather specified in a single location, making them harder to test.\par
+Dependency injection takes the opposite approach, \b adopting a push model in place of the pull model. Inversion of Control \b0 is a term that\rquote s often used to describe this push model and dependency injection is one specific implementation of the inversion of control technique.\par
+Martin Fowler states: \ldblquote With service locator the application class asks for it explicitly by a message to the locator. With injection there is no explicit request, the service appears in the application class\emdash hence the inversion of control.\rdblquote  (Inversion of Control Containers and the Dependency Injection pattern.)\par
+With dependency injection, another class is responsible for \b injecting (pushing) the dependencies into the high-level client classes\b0 , such as the ManagementController class, at runtime. The following code sample shows what the high-level ManagementController class looks like if you decide to use dependency injection.\par
+public class ManagementController : Controller\par
+\{\par
+  private readonly ITenantStore tenantStore;\par
+\par
+  public ManagementController(ITenantStore tenantStore)\par
+  \{\par
+    this.tenantStore = tenantStore;\par
+  \}\par
+\par
+  public ActionResult Index()\par
+  \{\par
+    var model = new TenantPageViewData<IEnumerable<string>>\par
+        (this.tenantStore.GetTenantNames())\par
+    \{\par
+      Title = "Subscribers"\par
+    \};\par
+    return this.View(model);\par
+  \}\par
+\par
+  ...\par
+\}\par
+\par
+As you can see in this sample, the ManagementController constructor receives an ITenantStore instance as a parameter, injected by some other class. The only dependency in the ManagementContoller class is on the interface type. This is better because it doesn't have any knowledge of the class or component that is responsible for instantiating the ITenantStore object.\par
+\par
+Object Composition\par
+So far in this chapter, you have seen how dependency injection can simplify classes such as the ManagementController class and minimize the number of dependencies between classes in your application. The previous chapter explained some of the benefits of this approach, such as maintainability and testability, and showed how this approach relates to the SOLID principles of object-oriented programming. You will now see how this might work in practice: in particular, how and where you might use dependency injection in your own applications.\par
+If you adopt the dependency injection approach, you will have many classes in your application that require some other class or component to pass the necessary dependencies into their constructors or methods as parameters or as property values before you can use them. This implies that your application requires a class or component that is responsible for instantiating all the required objects and passing them into the correct constructors, methods, and properties: your application must know how to compose its object graph before it can perform any work. This must happen very early in the application's lifecycle: for example, in the Main method of a console application, in the Global.asax in a web application, in a role's OnStart method in a Windows Azure application, or in the initialization code for a test method.\par
+Object Lifetime\par
+You should determine when to create the objects in your application based on criteria such as which object is responsible for managing the state, is the object shared, and how long the object will live for. Creating an object always takes a finite amount of time that is determined by the object\rquote s size and complexity, and once you have created an object, it occupies some of your system\rquote s memory.\par
+Dn178469.note(en-us,PandP.30).gifJana says:\par
+Jana\tab Whichever way you create an object, there is always a trade-off between performance and resource utilization when you decide where to instantiate it.\par
+In the example, you've seen in this chapter, there is a single ManagementController client class that uses an implementation of the ITenantStore interface. In a real application, there may be many other client classes that all need ITenantStore instances. Depending on the specific requirements and structure of your application, you might want each client class to have its own ITenantStore object, or have all the client classes share the same ITenantStore instance, or for different groups of client classes each have their own ITenantStore instance.\par
+If every client object has its own ITenantStore instance, then the ITenantStore instance can be garbage collected along with the client object. If multiple client objects share an ITenantStore instance, then the class or component that instantiates the shared ITenantStore object must responsible for tidying it up when all the clients are finished with it.\b\par
+\b0 Types of Injection\par
+Typically, when you instantiate an object you invoke a class constructor and pass any values that the object needs as parameters to the constructor. In the example that you saw earlier in this chapter, the constructor in the ManagementController class expects to receive an object that implements the ITenantStore interface. This is an example of \b constructor injection \b0 and is the type of injection you will use most often. There are other types of injection such as\b  property setter injection and method call injection\b0 , but they are less commonly used.\par
+\par
+You should use property setter injection when the dependency is optional. However don\rquote t use property setter injection as a technique to avoid polluting your constructor with multiple dependencies; too many dependencies might be an indicator of poor design because it is placing too much responsibility in a single class. See the single responsibility principle discussed in Chapter 1.\par
+\b You should only use property setter injection if the class has a usable \i default value \i0 for the property. While you cannot forget to call a constructor, you can forget to set a property such as the ReadWriteStrategy property in the example above.\par
+\b0 However, dependencies are rarely optional when you are building a LOB application. If you do have an optional dependency, consider using constructor injection and injecting an empty implementation (the Null Object Pattern.)\par
+Method call injection is useful when you want to provide some additional information about the context that the object is being used in that can\rquote t be passed in as a constructor parameter.\par
+}
+ 

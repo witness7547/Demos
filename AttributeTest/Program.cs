@@ -12,7 +12,13 @@ namespace AttributeTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Example.Add(1, 2));
+            //Console.WriteLine(Example.Add(1, 2));
+
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            foreach (var item in assembly.GetCustomAttributes())
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
     }
 

@@ -1,0 +1,23 @@
+策略
+UPSListenerBase : IUPSListener
+ApcUpsListener : UPSListenerBase
+
+public class RISDataProviderByFodicom : IRISDataProvider
+public class RISDataProviderByDCMTK : IRISDataProvider
+
+
+迭代器
+foreach
+
+观察者
+用户登录成功后发布登录完成消息
+订阅者者刷新日期
+
+单例
+class ConfigurationReader : IConfigReader
+public class ConfigurationWriter : IConfigWriter
+
+ServiceLocator
+private readonly static ConcurrentDictionary<Type, IRepository> repositoryDictionary = new ConcurrentDictionary<Type,IRepository>();
+public static T GetRepository<T>() where T : IRepository
+private static T CreateRepository<T>() where T : IRepository
