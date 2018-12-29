@@ -61,6 +61,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CLR via C#.rtf" />
+    <None Include="mvvm.rtf" />
+    <None Include="UI设计.rtf" />
+    <None Include="unity-DI AOP.rtf" />
+    <None Include="Windows application.rtf" />
+    <None Include="WPF UI线程处理模型.rtf" />
+    <None Include="委托和事件.rtf" />
+    <None Include="异步AMP.rtf" />
+    <None Include="异步TAP.rtf" />
+    <None Include="深入浅出WPF.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="设计模式总结.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
