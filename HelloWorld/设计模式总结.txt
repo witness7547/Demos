@@ -1,4 +1,4 @@
-²ßÂÔ
+ï»¿ç­–ç•¥
 UPSListenerBase : IUPSListener
 ApcUpsListener : UPSListenerBase
 
@@ -6,16 +6,16 @@ public class RISDataProviderByFodicom : IRISDataProvider
 public class RISDataProviderByDCMTK : IRISDataProvider
 
 
-µü´úÆ÷
-Ò»°ã¼¯ºÏÄÚ²¿»áÄÚÖÃÒ»¸öµü´úÆ÷ÓÃÓÚ·ÃÎÊ¼¯ºÏÖĞµÄÔªËØ£¬µ«ÊÇÊı×é¾ÍµÃ×Ô¼ºÊµÏÖÒ»¸ö
+è¿­ä»£å™¨
+ä¸€èˆ¬é›†åˆå†…éƒ¨ä¼šå†…ç½®ä¸€ä¸ªè¿­ä»£å™¨ç”¨äºè®¿é—®é›†åˆä¸­çš„å…ƒç´ ï¼Œä½†æ˜¯æ•°ç»„å°±å¾—è‡ªå·±å®ç°ä¸€ä¸ª
 foreach
 
-¹Û²ìÕß
-ÓÃ»§µÇÂ¼³É¹¦ºó·¢²¼µÇÂ¼Íê³ÉÏûÏ¢
-¶©ÔÄÕßÕßË¢ĞÂÈÕÆÚ
-£¨CarDealer newcar Customer£©
+è§‚å¯Ÿè€…
+ç”¨æˆ·ç™»å½•æˆåŠŸåå‘å¸ƒç™»å½•å®Œæˆæ¶ˆæ¯
+è®¢é˜…è€…è€…åˆ·æ–°æ—¥æœŸ
+ï¼ˆCarDealer newcar Customerï¼‰
 
-µ¥Àı
+å•ä¾‹
 class ConfigurationReader : IConfigReader
 public class ConfigurationWriter : IConfigWriter
 
@@ -24,36 +24,36 @@ private readonly static ConcurrentDictionary<Type, IRepository> repositoryDictio
 public static T GetRepository<T>() where T : IRepository
 private static T CreateRepository<T>() where T : IRepository
 
-´úÀí£ºrpc
+ä»£ç†ï¼šrpc
 stub skeleton
 
 /* C# */
-³£Á¿ÊÇ²»¿É±äµÄÖµ£¬ÔÚ±àÒëÊ±ÊÇÒÑÖªµÄ£¬ÔÚ³ÌĞòµÄÉúÃüÖÜÆÚÄÚ²»»á¸Ä±ä¡£ ³£Á¿Ê¹ÓÃ const ĞŞÊÎ·ûÉùÃ÷¡£ ½ö C# ÄÚÖÃÀàĞÍ£¨²»°üÀ¨ System.Object£©¿ÉÉùÃ÷Îª const¡£ ÓĞ¹ØÄÚÖÃÀàĞÍµÄÁĞ±í£¬Çë²ÎÔÄÄÚÖÃÀàĞÍ±í¡£ ÓÃ»§¶¨ÒåµÄÀàĞÍ£¨°üÀ¨Àà¡¢½á¹¹ºÍÊı×é£©²»ÄÜÎª const¡£ Ê¹ÓÃ readonly ĞŞÊÎ·û´´½¨ÔÚÔËĞĞÊ±Ò»´ÎĞÔ£¨ÀıÈçÔÚ¹¹Ôìº¯ÊıÖĞ£©³õÊ¼»¯µÄÀà¡¢½á¹¹»òÊı×é£¬´Ëºó²»ÄÜ¸ü¸Ä¡£
-C# ²»Ö§³Ö const ·½·¨¡¢ÊôĞÔ»òÊÂ¼ş¡£
-³£Á¿ÔÚÉùÃ÷Ê±±ØĞë³õÊ¼»¯¡£ ÀıÈç:
+å¸¸é‡æ˜¯ä¸å¯å˜çš„å€¼ï¼Œåœ¨ç¼–è¯‘æ—¶æ˜¯å·²çŸ¥çš„ï¼Œåœ¨ç¨‹åºçš„ç”Ÿå‘½å‘¨æœŸå†…ä¸ä¼šæ”¹å˜ã€‚ å¸¸é‡ä½¿ç”¨ const ä¿®é¥°ç¬¦å£°æ˜ã€‚ ä»… C# å†…ç½®ç±»å‹ï¼ˆä¸åŒ…æ‹¬ System.Objectï¼‰å¯å£°æ˜ä¸º constã€‚ æœ‰å…³å†…ç½®ç±»å‹çš„åˆ—è¡¨ï¼Œè¯·å‚é˜…å†…ç½®ç±»å‹è¡¨ã€‚ ç”¨æˆ·å®šä¹‰çš„ç±»å‹ï¼ˆåŒ…æ‹¬ç±»ã€ç»“æ„å’Œæ•°ç»„ï¼‰ä¸èƒ½ä¸º constã€‚ ä½¿ç”¨ readonly ä¿®é¥°ç¬¦åˆ›å»ºåœ¨è¿è¡Œæ—¶ä¸€æ¬¡æ€§ï¼ˆä¾‹å¦‚åœ¨æ„é€ å‡½æ•°ä¸­ï¼‰åˆå§‹åŒ–çš„ç±»ã€ç»“æ„æˆ–æ•°ç»„ï¼Œæ­¤åä¸èƒ½æ›´æ”¹ã€‚
+C# ä¸æ”¯æŒ const æ–¹æ³•ã€å±æ€§æˆ–äº‹ä»¶ã€‚
+å¸¸é‡åœ¨å£°æ˜æ—¶å¿…é¡»åˆå§‹åŒ–ã€‚ ä¾‹å¦‚:
 class Calendar1
 {
     public const int months = 12;
 }
 
 const readonly sealed abstract virtual 
-event ¹Ø¼ü×ÖÓÃÓÚÉùÃ÷·¢²¼·şÎñÆ÷ÀàÖĞµÄÊÂ¼ş
+event å…³é”®å­—ç”¨äºå£°æ˜å‘å¸ƒæœåŠ¡å™¨ç±»ä¸­çš„äº‹ä»¶
 
-¶È0£ºn0 (Ò¶×Ó½Úµã)
-¶È1£ºn1£¨ÍêÈ«¶ş²æÊ÷ÒªÃ´Îª0ÒªÃ´Îª1£©
-¶È2£ºn2
-nÎª×Ü½áµãÊı
+åº¦0ï¼šn0 (å¶å­èŠ‚ç‚¹)
+åº¦1ï¼šn1ï¼ˆå®Œå…¨äºŒå‰æ ‘è¦ä¹ˆä¸º0è¦ä¹ˆä¸º1ï¼‰
+åº¦2ï¼šn2
+nä¸ºæ€»ç»“ç‚¹æ•°
 
 n0 + n1 + n2 = n
 2 * n2 + n1 + 1 = n
 
 n0 = (n+1-n1)/2
-¼´n0 = (n+1)/2£»(¶ÔÓ¦n1 = 0)
- »òÕßn0 = n/2;  (¶ÔÓ¦n1 = 1)
+å³n0 = (n+1)/2ï¼›(å¯¹åº”n1 = 0)
+ æˆ–è€…n0 = n/2;  (å¯¹åº”n1 = 1)
 
 
 
-/* ¹ØÓÚ¹¹Ôìº¯ÊıÖĞ²»ÄÜµ÷ÓÃĞéº¯ÊıÎÊÌâ*/
+/* å…³äºæ„é€ å‡½æ•°ä¸­ä¸èƒ½è°ƒç”¨è™šå‡½æ•°é—®é¢˜*/
 In order to answer your question, consider this question: what will the below code print out when the Child object is instantiated?
 
 class Parent
@@ -85,3 +85,42 @@ class Child : Parent
 The answer is that in fact a NullReferenceException will be thrown, because foo is null. An object's base constructor is called before its own constructor. By having a virtual call in an object's constructor you are introducing the possibility that inheriting objects will execute code before they have been fully initialized.
 
 
+******** å¯ç©ºå€¼ç±»å‹ ********
+intï¼Ÿ å…¶å®æ˜¯ Nullable<Int32>
+
+
+******* lock *********
+lock(obj)
+{}
+
+Monitor.Enter(obj);// Monitor æ˜¯å¯é‡å…¥é”
+try
+{
+//...
+}
+finally
+{
+   Monitor.Exit(obj);
+}
+
+
+
+var temp = obj;
+bool lockTaken = false;
+try
+{
+   Monitor.Enter(temp);
+   // ....
+}
+finally
+{
+   if(lockTaken)
+   {Monitor.Exit(temp);}
+}
+
+
+åŒæ­¥ç´¢å¼•å—
+ç±»å‹å¯¹è±¡æŒ‡é’ˆ
+
+Equal
+getHashcode
