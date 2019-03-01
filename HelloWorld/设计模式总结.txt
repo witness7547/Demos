@@ -39,6 +39,31 @@ class Calendar1
 const readonly sealed abstract virtual 
 event 关键字用于声明发布服务器类中的事件
 
+********* 关键字(分别修饰类型 方法（属性、事件） 字段) ***********
+abstract（修饰类型：表示不能构造该类型的实例；  修饰方法/属性/事件：表示为了构造派生类型时，派生类型必须重写并实现这些抽象方法、属性或者事件；另外抽象成员必须是包含在抽象类型中    不允许修饰字段/常量）
+The abstract modifier indicates that the thing being modified has a missing or incomplete implementation.
+'MyStaticClass': an abstract class cannot be sealed or static [Test1]
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract
+
+virtual（不能修饰类型， 修饰方法/属性/事件：表示可以有派生类型重写； 不允许修饰字段/常量）
+The virtual keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class. 
+virtual or abstract members cannot be private(abstract class can be private)（abstract和virtual表示就是要被继承和重写实现的（abstract必须重写实现，virtual不一定），所以必须为public）
+
+override（不能修饰类型， 修饰方法/属性/事件：表示派生类型正在重写基类的virtual或者abstract成员， 不允许修饰字段/常量）
+
+sealed（修饰类型：表示类型不能当做基类型，无法派生；  修饰方法/属性/事件：表示这个成员不能被派生类型重写，只能将该关键字应用于重写虚方法的方法；  不允许修饰字段/常量）
+
+new（应用于嵌套类型、方法、属性、事件、常量或字段时，表示与基类型中的相似成员无任何关系）
+
+static（cannot declare instance members in a static class； A static member 'MyStaticClass.MyProperty' cannot be marked as override, virtual, or abstract）（抽象类中可以有静态成员）
+Use the static modifier to declare a static member, which belongs to the type itself rather than to a specific object. The static modifier can be used with classes, fields, methods, properties, operators, events, and constructors, but it cannot be used with indexers, finalizers, or types other than classes.
+
+An abstract method or property (both can be virtual or abstract) can only be declared in an abstract class and cannot have a body, i.e. you can't implement it in your abstract class.
+
+A virtual method or property must have a body, i.e. you must provide an implementation (even if the body is empty).
+
+If someone want to use your abstract class, he will have to implement a class that inherits from it and explicitly implement the abstract methods and properties but can chose to not override the virtual methods and properties.
+
 度0：n0 (叶子节点)
 度1：n1（完全二叉树要么为0要么为1）
 度2：n2
