@@ -20,7 +20,7 @@ namespace Sorting
         /// <param name="n"></param>
         public static void Sort(int[] arr, int n)
         {
-            for (int i = 0; i < (n-1); i++)
+            for (int i = 0; i < (n - 1); i++)
             {
                 int tmp = arr[i];
                 int j = i - 1;
@@ -29,7 +29,7 @@ namespace Sorting
                 {
                     if (tmp < arr[j])
                     {
-                        arr[j+1] = arr[j];//移动数据
+                        arr[j + 1] = arr[j];//移动数据
                     }
                     else
                     {
@@ -37,7 +37,43 @@ namespace Sorting
                     }
                 }
 
-                arr[j+1] = tmp;//插入数据
+                arr[j + 1] = tmp;//插入数据
+            }
+        }
+
+
+        /// <summary>
+        /// 原地排序（空间复杂度为O(1)）
+        /// 稳定排序（查找插入点比较时如果相等就不移动）
+        /// 时间复杂度：
+        /// 最好 有序情况下每次比较一次O(n)
+        /// 最坏 逆序情况下 O（n^2）
+        /// 平均 O（n^2）
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="len"></param>
+        public static void InsertionSort(int[] a, int len)
+        {
+            for (int i = 0; i < len - 1; i++)
+            {
+                int tmp = a[i];
+                int index = 0;//插入点索引
+
+                //查找插入点
+                for (int j = i-1; j >= 0 ; j--)
+                {
+                    if (a[j] > tmp)
+                    {
+                        a[j + 1] = a[j];//向右移动
+                    }
+                    else
+                    {
+                        index = j+1;
+                        break;
+                    }
+                }
+
+                a[index] = tmp;
             }
         }
     }
